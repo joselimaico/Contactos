@@ -95,7 +95,8 @@ public class ConsultaContactos extends AppCompatActivity {
     }
     public void consultContacts(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url2 ="https://api.androidhive.info/contacts/";
+        //String url2 ="https://api.androidhive.info/contacts/";
+        String url2 ="http://192.168.100.38:81/contactos.php";
         final JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url2, null, new
                         Response.Listener<JSONObject>() {
@@ -104,14 +105,14 @@ public class ConsultaContactos extends AppCompatActivity {
                                 try {
                                     JSONObject jsonObj = new
                                             JSONObject(response.toString());
-                                    JSONArray contacts = jsonObj.getJSONArray("contacts");
+                                    JSONArray contacts = jsonObj.getJSONArray("contactos");
                                     for (int i = 0; i < contacts.length(); i++) {
                                         JSONObject c = contacts.getJSONObject(i);
                                         String id = c.getString("id");
-                                        String name = c.getString("name");
+                                        String name = c.getString("nombre");
                                         String email = c.getString("email");
-                                        String address = c.getString("address");
-                                        String gender = c.getString("gender");
+                                        String address = c.getString("direccion");
+                                        String gender = c.getString("genero");
                                         contacto.setId_contacto(id);
                                         contacto.setNombre(name);
                                         contacto.setEmail(email);
