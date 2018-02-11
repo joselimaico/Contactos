@@ -9,9 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by root on 2/1/18.
- */
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
@@ -85,4 +82,5 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return contactoList;
     }
+
 }

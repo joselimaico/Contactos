@@ -7,6 +7,7 @@
     <string name="value_email">email</string>
     <string name="value_direccion">direccion</string>
     <string name="value_genero">id_genero</string>
+    <string name="btn_registro_contactos">Registrar Contactos</string>
 
 
 </resources>

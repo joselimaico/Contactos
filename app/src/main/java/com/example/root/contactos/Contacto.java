@@ -6,9 +6,6 @@ package com.example.root.contactos;
 
 public class Contacto {
     int id;
-
-
-
     String id_contacto;
     String nombre;
     String email;
